@@ -1,0 +1,860 @@
+<html lang="tr-TR"><head>
+    <link href="stylec.css" rel="stylesheet" type="text/css">
+ </head>
+<body><div class="card">
+    <div class="card-body">
+        
+            <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+                <tbody><tr>
+                    <td class="sy-label" style="padding:20px;">
+                        <strong>Course Name</strong>
+                    </td>
+                    <td style="padding:20px;">
+                        <div class="editinput" id="course_name">-</div>
+                    </td>
+                </tr>
+            </tbody></table>
+            </div>
+    
+	
+	<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered transpose">
+	    <tbody><tr class="sy-label">
+	        <td scope="col">
+	            <div align="center">
+	                <strong>Code</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	               <strong> Semester</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	              <strong>  Theory<br>
+	                    (hour/week)</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	            <strong>    Application/Lab<br>
+	                    (hour/week)</strong>
+	            </div>
+	        </td>
+	       <!-- <td rowspan="2" scope="col">
+	                <div align="center">
+	                        <strong>Laboratory<br />
+	        (hour/week)</strong>
+	            </div>
+	        </td>-->
+	        <td scope="col">
+	            <div align="center">
+	                <strong>Local Credits</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	           <div align="center"><strong>ECTS</strong></div>
+	        </td>
+	    </tr>
+	    <tr>
+
+	        <td>
+	             <div align="center" id="course_code">-</div>
+	        </td>
+	        <td>
+	            <!--(empty($semester["semester"])?"Fall/Spring":($semester["semester"]=="1"?"Fall":"Spring"))-->
+	            <div id="semester" class="editinput" align="center">-</div>
+	        </td>
+	        <td>
+	            <div align="center" id="weekly_hours" class="editinput">-</div>
+	        </td>
+	        <td>
+	            <div align="center" id="app_hours" class="editinput">-</div>
+	        </td>
+	        <td>
+	            <div id="ieu_credit" class="editinput" align="center">-</div>
+	        </td>
+	        <td>
+	            <div id="ects_credit" class="editinput" align="center">-</div>
+	        </td>
+	    </tr>
+    </tbody></table>
+    </div>
+<br>
+ <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+ 
+        <tbody><tr>
+            <td style="width:20%" valign="top" class="sy-label">
+                    <strong>Prerequisites</strong>
+            </td>
+            <td colspan="6">
+                <div id="pre_requisites">-</div>
+            </td>
+        </tr>
+  <tr>
+        <td class="sy-label">
+            <strong>Course Language</strong>
+        </td>
+        <td>
+           <div class="editinput" id="course_lang">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Course Type</strong>
+        </td>
+        <td>
+            <div class="editinput" id="course_type">-</div>
+        </td>
+    </tr>
+   <tr>
+        <td class="sy-label">
+            <strong>Course Level</strong>
+        </td>
+        <td>
+            <div class="editselect" id="course_level">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Course Coordinator</strong>
+        </td>
+        <td>
+            <div id="coordinators">-</div>          </td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Course Lecturer(s)</strong>
+        </td>
+        <td>
+<div id="lecturers">-</div>       </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Assistant(s)</strong>
+        </td>
+        <td <div="" id="assistants">-</td>
+    </tr>
+    </tbody></table>
+    </div>
+    <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">    
+    <tbody><tr>
+        <td style="width:20%" valign="top" class="sy-label">
+            <strong>Course Objectives</strong>
+        </td>
+        <td><div id="purpose">-</div></td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Learning Outcomes</strong>
+        </td>
+        <td>
+             <span>The students who succeeded in this course;</span>
+<ul id="outcome"><li id="li0"></li><li id="li1"></li><li id="li2"></li><li id="li3"></li><li id="li4"></li></ul>        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Course Description</strong>
+        </td>
+        <td><div id="description">-</div></td>
+    </tr>
+</tbody></table>
+</div>
+	<p>&nbsp;</p>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+    <tbody><tr>
+        <td rowspan="5" class="sy-label" style="width:20%">
+            <div align="center">
+                <p><br><br><strong>Course Category</strong></p>
+            </div>
+        </td>
+        <td>
+Core Courses        </td>
+        <td class="veri">
+            <div id="core_course" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Major Area Courses</td>
+        <td class="veri" width="50">
+            <div id="major_area" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Supportive Courses</td>
+        <td class="veri" width="50">
+            <div id="supportive_courses" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Media and Management Skills Courses</td>
+        <td class="veri" width="50">
+            <div id="media_man_skills" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Transferable Skill Courses</td>
+        <td class="veri" width="50">
+            <div id="trans_skills" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>WEEKLY SUBJECTS AND RELATED PREPARATION STUDIES</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="weeks">
+    <tbody><tr class="table_top">
+        <td class="text-center" style="width:5%"><strong>Week</strong></td>
+        <td><strong>Subjects</strong></td>
+        <td style="width:30%"><strong>Related Preparation</strong></td>
+    </tr>
+                <tr id="hafta_1">
+                <td><strong>1</strong></td>
+                <td><div id="konu1">-</div></td>
+                <td><div id="hazirlik1">-</div></td>
+            </tr>
+                    <tr id="hafta_2">
+                <td><strong>2</strong></td>
+                <td><div id="konu2">-</div></td>
+                <td><div id="hazirlik2">-</div></td>
+            </tr>
+                    <tr id="hafta_3">
+                <td><strong>3</strong></td>
+                <td><div id="konu3">-</div></td>
+                <td><div id="hazirlik3">-</div></td>
+            </tr>
+                    <tr id="hafta_4">
+                <td><strong>4</strong></td>
+                <td><div id="konu4">-</div></td>
+                <td><div id="hazirlik4">-</div></td>
+            </tr>
+                    <tr id="hafta_5">
+                <td><strong>5</strong></td>
+                <td><div id="konu5">-</div></td>
+                <td><div id="hazirlik5">-</div></td>
+            </tr>
+                    <tr id="hafta_6">
+                <td><strong>6</strong></td>
+                <td><div id="konu6">-</div></td>
+                <td><div id="hazirlik6">-</div></td>
+            </tr>
+                    <tr id="hafta_7">
+                <td><strong>7</strong></td>
+                <td><div id="konu7">-</div></td>
+                <td><div id="hazirlik7">-</div></td>
+            </tr>
+                    <tr id="hafta_8">
+                <td><strong>8</strong></td>
+                <td><div id="konu8">-</div></td>
+                <td><div id="hazirlik8">-</div></td>
+            </tr>
+                    <tr id="hafta_9">
+                <td><strong>9</strong></td>
+                <td><div id="konu9">-</div></td>
+                <td><div id="hazirlik9">-</div></td>
+            </tr>
+                    <tr id="hafta_10">
+                <td><strong>10</strong></td>
+                <td><div id="konu10">-</div></td>
+                <td><div id="hazirlik10">-</div></td>
+            </tr>
+                    <tr id="hafta_11">
+                <td><strong>11</strong></td>
+                <td><div id="konu11">-</div></td>
+                <td><div id="hazirlik11">-</div></td>
+            </tr>
+                    <tr id="hafta_12">
+                <td><strong>12</strong></td>
+                <td><div id="konu12">-</div></td>
+                <td><div id="hazirlik12">-</div></td>
+            </tr>
+                    <tr id="hafta_13">
+                <td><strong>13</strong></td>
+                <td><div id="konu13">-</div></td>
+                <td><div id="hazirlik13">-</div></td>
+            </tr>
+                    <tr id="hafta_14">
+                <td><strong>14</strong></td>
+                <td><div id="konu14">-</div></td>
+                <td><div id="hazirlik14">-</div></td>
+            </tr>
+                    <tr id="hafta_15">
+                <td><strong>15</strong></td>
+                <td><div id="konu15">-</div></td>
+                <td><div id="hazirlik15">-</div></td>
+            </tr>
+                    <tr id="hafta_16">
+                <td><strong>16</strong></td>
+                <td><div id="konu16">-</div></td>
+                <td><div id="hazirlik16">-</div></td>
+            </tr>
+        </tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+    <tbody><tr>
+        <td style="width:20%" valign="top">
+            <strong>Course Notes/Textbooks</strong>
+        </td>
+        <td><div id="book_name">-</div>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <strong>Suggested Readings/Materials</strong>
+        </td>
+        <td><div id="materials">-</div>
+</td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>EVALUATION SYSTEM</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="evaluation_table1">
+    <tbody><tr class="table_top">
+        <td style="width:70%"><strong>Semester Activities</strong></td>
+        <td style="width:15%" align="center"><strong>Number</strong></td>
+        <td style="width:15%" align="center"><strong>Weigthing</strong></td>
+        <td style="width:15%" align="center"><strong>LO1</strong></td>
+    </tr>
+    <tr>
+        <td>Participation</td>
+        <td>
+            <div class="editinput" id="attendance_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="attendance_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1attend">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Laboratory / Application</td>
+        <td>
+            <div class="editinput" id="lab_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="lab_per">-</div>
+       	</td>
+        <td>
+            <div class="editinput" id="LO1lab">-</div>
+        </td>
+    </tr>
+	
+    <tr>
+        <td>Field Work</td>
+        <td>
+            <div class="editinput" id="fieldwork_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="fieldwork_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1field">-</div>
+        </td>
+    </tr>
+	
+    <tr>
+        <td>Quizzes / Studio Critiques</td>
+        <td>
+            <div class="editinput" id="quiz_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="quiz_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1quiz">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Homework / Assignments</td>
+        <td>
+            <div class="editinput" id="homework_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="homework_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1homework">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Presentation / Jury</td>
+        <td>
+            <div class="editinput" id="presentation_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="presentation_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1present">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Project</td>
+        <td>
+            <div class="editinput" id="project_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="project_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1project">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Seminar / Workshop</td>
+        <td>
+            <div class="editinput" id="seminar_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="seminar_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1seminar">-</div>
+        </td>
+    </tr>    
+<tr>
+        <td>Oral Exams</td>
+        <td>
+            <div class="editinput" id="portfolios__no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="portfolios_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1portfolio">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Midterm</td>
+        <td>
+            <div class="editinput" id="midterm_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="midterm_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1mid">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Final Exam</td>
+        <td>
+            <div class="editinput" id="final_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="final_per">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="LO1final">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><strong>Total</strong></td>
+	<td>
+            <div class="editinput" id="ara_total_no">0</div>
+        </td>
+        <td>
+            <div class="editinput" id="ara_total_per">0</div>
+        </td>
+     <td>
+            <div class="editinput" id="LOsum">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+<br>
+
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="evaluation_table2">
+    <tbody><tr style="background-color:#ff6600; color:#fff; font-weight: 100;">
+        <td style="width:70%">Weighting of Semester Activities on the Final Grade</td>
+        <td style="width:15%" align="center" width="150" id="icKatki1">-</td>
+        <td style="width:15%" align="center" width="150" id="icKatki2">-</td>
+    </tr>
+    <tr style="background-color:#df520f; color:#fff; font-weight: 400;">
+        <td>Weighting of End-of-Semester Activities on the Final Grade</td>
+        <td align="center" width="150" id="sonKatki1&quot;">-</td>
+        <td align="center" width="150" id="sonKatki2">-</td>
+    </tr>
+    <tr>
+        <td align="right"><strong>Total</strong></td>
+        <td align="center" id="total_no" style="font-weight: bold;">-</td>
+        <td align="center" id="total_per" style="font-weight: bold;">-</td>
+    </tr>
+</tbody></table>
+</div>
+
+<div>
+    <h3>
+        <strong>ECTS / WORKLOAD TABLE</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="workload_table">
+    <thead>
+	    <tr class="table_top">
+	        <th style="width:55%"><strong>Semester Activities</strong></th>
+	        <th style="width:15%" class="text-center"><strong>Number</strong></th>
+	        <th style="width:15%" class="text-center"><strong>Duration (Hours)</strong></th>
+	        <th style="width:15%" class="text-center"><strong>Workload</strong></th>
+	    </tr>
+    </thead>
+    <tbody><tr>
+        <td>Theoretical Course Hours<br><small><i>(Including exam week: 16 x total hours)</i></small></td>
+        <td>
+            <div id="course_hour_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="course_hour_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="course_hour_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+	
+    <tr>
+        <td>Laboratory / Application Hours<br><small><i>(Including exam week: 16 x total hours)</i></small></td>
+        <td>
+            <div id="lab_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="lab_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="lab_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Study Hours Out of Class</td>
+        <td>
+            <div id="out_hour_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="out_hour_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="out_hour_total_workload" class="editinput">-</div>
+        </td>
+    </tr>    
+    <tr>
+        <td>Field Work</td>
+        <td>
+            <div id="fieldwork_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="fieldwork_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="fieldwork_total_number" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Quizzes / Studio Critiques</td>
+        <td>
+            <div id="quizess_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="quizess_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="quizess_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Homework / Assignments</td>
+        <td>
+            <div id="homework_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="homework_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="homework_total_workload" class="editinput">-</div>
+        </td>
+    </tr>    
+    <tr>
+        <td>Presentation / Jury</td>
+        <td>
+            <div id="presentation_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="presentation_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="presentation_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Project</td>
+        <td>
+            <div id="project_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="project_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="project_total_workload" class="editinput">-</div>
+        </td>
+    </tr>    
+    <tr>
+        <td>Seminar / Workshop</td>
+        <td>
+            <div id="seminar_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="seminar_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="seminar_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+<tr>
+        <td>Oral Exam</td>
+        <td>
+            <div id="portfolios_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="portfolios_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="portfolios_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Midterms</td>
+        <td>
+            <div id="midterm_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="midterm_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="midterm_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Final Exam</td>
+        <td>
+            <div id="final_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="final_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="final_total_workload" class="editinput">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><strong>Total</strong></td>
+        <td align="center" style="font-weight: bold;">
+		<div class="editinput" id="ects_total">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>COURSE LEARNING OUTCOMES AND PROGRAM QUALIFICATIONS RELATIONSHIP</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="yeters">
+    <tbody><tr class="table_top ">
+        <td rowspan="2">
+            <div align="center">#</div>
+        </td>
+        <td rowspan="2"><strong>Program Competencies/Outcomes</strong></td>
+        <td colspan="5">
+            <div align="center"><strong>* Contribution Level</strong></div>
+        </td>
+    </tr>
+    <tr>
+        <td width="30" class="table_top"><div align="center">1</div></td>
+        <td width="30" class="table_top"><div align="center">2</div></td>
+        <td width="30" class="table_top"><div align="center">3</div></td>
+        <td width="30" class="table_top"><div align="center">4</div></td>
+        <td width="30" class="table_top"><div align="center">5</div></td>
+        <td width="30" class="table_top"><div align="center">LO#</div></td>
+    </tr>
+                <tr id="1">
+                <td><strong>1</strong></td>
+                <td class="outcomeAlert"><p>To have adequate knowledge in Mathematics, Science and Computer Engineering; to be able to use theoretical and applied information in these areas on complex engineering problems.</p>
+</td>
+                
+                 <td width="30" style="text-align:center; vertical-align:middle;" id="1katki1">-</td><td width="30" style="text-align:center; vertical-align:middle;" id="1katki2">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki3">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki4">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki5">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki_LO">-</td>
+            </tr>
+                    <tr id="2">
+                <td><strong>2</strong></td>
+                <td class="outcomeAlert"><p>To be able to identify, define, formulate, and solve complex Computer Engineering problems; to be able to select and apply proper analysis and modeling methods for this purpose.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki1">-</td><td width="30" style="text-align:center; vertical-align:middle;" id="2katki2">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki3">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki4">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki5">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki_LO">-</td>
+            </tr>
+                    <tr id="3">
+                <td><strong>3</strong></td>
+                <td class="outcomeAlert"><p>To be able to design a complex system, process, device or product under realistic constraints and conditions, in such a way as to meet the requirements; to be able to apply modern design methods for this purpose.</p>
+</td>
+        <td width="30" style="text-align:center; vertical-align:middle;" id="3katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="3katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="3katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="3katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="3katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="3katki_LO">-</td>
+            </tr>
+                    <tr id="4">
+                <td><strong>4</strong></td>
+                <td class="outcomeAlert"><p>To be able to devise, select, and use modern techniques and tools needed for analysis and solution of complex problems in Computer Engineering applications; to be able to use information technologies effectively.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="4katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="4katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="4katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="4katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="4katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="4katki_LO">-</td>
+            </tr>
+                    <tr id="5">
+                <td><strong>5</strong></td>
+                <td class="outcomeAlert"><p>To be able to design and conduct experiments, gather data, analyze and interpret results for investigating complex engineering problems or Computer Engineering research topics.</p>
+</td>
+                
+               <td width="30" style="text-align:center; vertical-align:middle;" id="5katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="5katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="5katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="5katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="5katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="5katki_LO">-</td>
+            </tr>
+                    <tr id="6">
+                <td><strong>6</strong></td>
+                <td class="outcomeAlert"><p>To be able to work efficiently in Computer Engineering disciplinary and multi-disciplinary teams; to be able to work individually.</p>
+</td>
+               <td width="30" style="text-align:center; vertical-align:middle;" id="6katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="6katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="6katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="6katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="6katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="6katki_LO">-</td>
+            </tr>
+                    <tr id="7">
+                <td><strong>7</strong></td>
+                <td class="outcomeAlert"><p>To be able to communicate effectively in Turkish, both orally and in writing; to be able to author and comprehend written reports, to be able to prepare design and implementation reports, to present effectively, to be able to give and receive clear and comprehensible instructions.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="7katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="7katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="7katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="7katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="7katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="7katki_LO">-</td>
+            </tr>
+                    <tr id="8">
+                <td><strong>8</strong></td>
+                <td class="outcomeAlert"><p>To have knowledge about global and social impact of Computer Engineering practices on health, environment, and safety; to have knowledge about contemporary issues as they pertain to engineering; to be aware of the legal ramifications of Computer Engineering solutions.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="8katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="8katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="8katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="8katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="8katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="8katki_LO">-</td>
+            </tr>
+                    <tr id="9">
+                <td><strong>9</strong></td>
+                <td class="outcomeAlert"><p>To be aware of ethical behavior, professional and ethical responsibility; to have knowledge&nbsp;<span style="font-size:11.0pt">about standards utilized in engineering applications.<o:p></o:p></span></p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="9katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="9katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="9katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="9katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="9katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="9katki_LO">-</td>
+            </tr>
+                    <tr id="10">
+                <td><strong>10</strong></td>
+                <td class="outcomeAlert"><p>To have knowledge about industrial practices such as project management, risk management, and change management; to have awareness of entrepreneurship and innovation; to have knowledge about sustainable development.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="10katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="10katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="10katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="10katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="10katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="10katki_LO">-</td>
+            </tr>
+                    <tr id="11">
+                <td><strong>11</strong></td>
+                <td class="outcomeAlert"><p>To be able to collect data in the area of Computer Engineering, and to 
+be able to communicate with colleagues in a foreign language. ("European Language Portfolio Global Scale", Level B1)
+</p>
+</td>
+                
+              <td width="30" style="text-align:center; vertical-align:middle;" id="11katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="11katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="11katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="11katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="11katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="11katki_LO">-</td>
+            </tr>
+                    <tr id="12">
+                <td><strong>12</strong></td>
+                <td class="outcomeAlert"><p>To be able to speak a second foreign language at a medium level of fluency efficiently.</p>
+</td>
+                
+               <td width="30" style="text-align:center; vertical-align:middle;" id="12katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="12katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="12katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="12katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="12katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="12katki_LO">-</td>
+                
+            </tr>
+                    <tr id="13">
+                <td><strong>13</strong></td>
+                <td class="outcomeAlert"><p>To recognize the need for lifelong learning; to be able to access information, to be able to stay current with developments in science and technology; to be able to relate the knowledge accumulated throughout the human history to Computer Engineering.</p>
+</td>
+                
+               <td width="30" style="text-align:center; vertical-align:middle;" id="13katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="13katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="13katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="13katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="13katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="13katki_LO">-</td>
+            </tr>
+        </tbody></table>
+</div>
+<p align="right">*1 Lowest, 2 Low, 3 Average, 4 High, 5 Highest</p>
+<!--
+<br><a class="link-icon btn btn-primary btn-md btn-block" href="https://ects.ieu.edu.tr/new/PDF_syllabus_HEADER.php?section=ce.cs.ieu.edu.tr&course_code=CE 215&course_name=Discrete Mathematics for Computer Science&lang=en&cer=&sem=">CLICK HERE FOR THE COURSE SYLLABUS</a><hr>
+-->
+<p>&nbsp;</p><hr>
+
+</div>
+    </div>
+ 
+</body></html>

@@ -1,0 +1,868 @@
+﻿<html lang="tr-TR"><head>
+    <link href="turkish.css" rel="stylesheet" type="text/css">
+ <meta charset="utf-8"></head>
+
+<body><div class="card">
+    <div class="card-body">
+        
+            <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+                <tbody><tr>
+                    <td class="sy-label" style="padding:20px;">
+                        <strong>Dersin Adı</strong>
+                    </td>
+                    <td style="padding:20px;">
+                        <div class="editinput" id="course_name">-</div>
+                    </td>
+                </tr>
+            </tbody></table>
+            </div>
+    
+	
+	<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered transpose">
+	    <tbody><tr class="sy-label">
+	        <td scope="col">
+	            <div align="center">
+	                <strong>Kodu</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	               <strong>Yarı Yıl</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	              <strong>  Teori
+	                    (saat/hafta)<br></strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	            <div align="center">
+	            <strong>    Uygulama/Lab<br>
+	                    (saat/hafta)</strong>
+	            </div>
+	        </td>
+	       <!-- <td rowspan="2" scope="col">
+	                <div align="center">
+	                        <strong><br />
+	        </strong>
+	            </div>
+	        </td>-->
+	        <td scope="col">
+	            <div align="center">
+	                <strong>Yerel Kredi</strong>
+	            </div>
+	        </td>
+	        <td scope="col">
+	           <div align="center"><strong>AKTS</strong></div>
+	        </td>
+	    </tr>
+	    <tr>
+
+	        <td>
+	             <div align="center" id="course_code" class="editinput">-</div>
+	        </td>
+	        <td>
+	            <!--(empty($semester["semester"])?"Fall/Spring":($semester["semester"]=="1"?"Fall":"Spring"))-->
+	            <div id="semester" class="editinput" align="center">-</div>
+	        </td>
+	        <td>
+	            <div align="center" id="weekly_hours" class="editinput">-</div>
+	        </td>
+	        <td>
+	            <div align="center" id="app_hours" class="editinput">-</div>
+	        </td>
+	        <td>
+	            <div id="ieu_credit" class="editinput" align="center">-</div>
+	        </td>
+	        <td>
+	            <div id="ects_credit" class="editinput" align="center">-</div>
+	        </td>
+	    </tr>
+    </tbody></table>
+    </div>
+<br>
+ <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+ 
+        <tbody><tr>
+            <td style="width:20%" valign="top" class="sy-label">
+                    <strong>Ön-Koşul(lar)</strong>
+            </td>
+            <td colspan="6">
+                <div id="pre_requisites">-
+</div>
+            </td>
+        </tr>
+  <tr>
+        <td class="sy-label">
+            <strong>Dersin Dili</strong>
+        </td>
+        <td>
+           <div class="editinput" id="course_lang">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Dersin Türü</strong>
+        </td>
+        <td>
+            <div class="editinput" id="course_type">-</div>
+        </td>
+    </tr>
+   <tr>
+        <td class="sy-label">
+            <strong>Dersin Düzeyi</strong>
+        </td>
+        <td>
+            <div class="editselect" id="course_level">-
+                </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Dersin Koordinatörü</strong>
+        </td>
+        <td><div id="coordinators">-</div></td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Öğretim Eleman(lar)ı</strong>
+        </td>
+        <td>
+    <div id="lecturers">-</div> </td>
+    </tr>
+    <tr>
+        <td class="sy-label">
+            <strong>Yardımcı(ları)</strong>
+        </td>
+    <td><div id="assistants">-</div></td>
+    </tr>
+    </tbody></table>
+    </div>
+    <div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">    
+    <tbody><tr>
+        <td style="width:20%" valign="top" class="sy-label">
+            <strong>Dersin Amacı</strong>
+        </td>
+        <td><div id="purpose">-</div></td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Öğrenme Çıktıları</strong>
+        </td>
+        <td>
+            <span>Bu dersi başarıyla tamamlayabilen öğrenciler;</span>
+    <div id="outcome">-
+
+
+</div></td>
+    </tr>
+    <tr>
+        <td valign="top" class="sy-label">
+            <strong>Ders Tanımı</strong>
+        </td>
+        <td><div id="description">-</div></td>
+    </tr>
+</tbody></table>
+</div>
+	<p>&nbsp;</p>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+    <tbody><tr>
+        <td rowspan="5" class="sy-label" style="width:20%">
+            <div align="center">
+                <p><br><br><strong>Dersin Kategorisi</strong></p>
+            </div>
+        </td>
+        <td>
+Temel Ders        </td>
+        <td class="veri">
+            <div id="core_course" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Uzmanlık/Alan Dersleri</td>
+        <td class="veri" width="50">
+            <div id="major_area" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Destek Dersleri</td>
+        <td class="veri" width="50">
+            <div id="supportive_courses" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>İletişim ve Yönetim Becerileri Dersleri</td>
+        <td class="veri" width="50">
+            <div id="media_man_skills" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Aktarılabilir Beceri Dersleri</td>
+        <td class="veri" width="50">
+            <div id="trans_skills" class="editcat" align="center">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>HAFTALIK KONULAR VE İLGİLİ ÖN HAZIRLIK ÇALIŞMALARI</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="weeks">
+    <tbody><tr class="table_top">
+        <td class="text-center" style="width:5%"><strong>Hafta</strong></td>
+        <td><strong>Konular</strong></td>
+        <td style="width:30%"><strong>Ön Hazırlık</strong></td>
+    </tr>
+                <tr id="hafta_1">
+                <td><strong>1</strong></td>
+                <td><div id="konu1">-</div></td>
+                <td><div id="hazirlik1">-</div></td>
+            </tr>
+                    <tr id="hafta_2">
+                <td><strong>2</strong></td>
+                <td><div id="konu2">-</div></td>
+                <td><div id="hazirlik2">-</div></td>
+            </tr>
+                    <tr id="hafta_3">
+                <td><strong>3</strong></td>
+                <td><div id="konu3">-</div></td>
+                <td><div id="hazirlik3">-</div></td>
+            </tr>
+                    <tr id="hafta_4">
+                <td><strong>4</strong></td>
+                <td><div id="konu4">-</div></td>
+                <td><div id="hazirlik4">-</div></td>
+            </tr>
+                    <tr id="hafta_5">
+                <td><strong>5</strong></td>
+                <td><div id="konu5">-</div></td>
+                <td><div id="hazirlik5">-</div></td>
+            </tr>
+                    <tr id="hafta_6">
+                <td><strong>6</strong></td>
+                <td><div id="konu6">-</div></td>
+                <td><div id="hazirlik6">-</div></td>
+            </tr>
+                    <tr id="hafta_7">
+                <td><strong>7</strong></td>
+                <td><div id="konu7">-</div></td>
+                <td><div id="hazirlik7">-</div></td>
+            </tr>
+                    <tr id="hafta_8">
+                <td><strong>8</strong></td>
+                <td><div id="konu8">-</div></td>
+                <td><div id="hazirlik8">-</div></td>
+            </tr>
+                    <tr id="hafta_9">
+                <td><strong>9</strong></td>
+                <td><div id="konu9">-</div></td>
+                <td><div id="hazirlik9">-</div></td>
+            </tr>
+                    <tr id="hafta_10">
+                <td><strong>10</strong></td>
+                <td><div id="konu10">-</div></td>
+                <td><div id="hazirlik10">-</div></td>
+            </tr>
+                    <tr id="hafta_11">
+                <td><strong>11</strong></td>
+                <td><div id="konu11">-</div></td>
+                <td><div id="hazirlik11">-</div></td>
+            </tr>
+                    <tr id="hafta_12">
+                <td><strong>12</strong></td>
+                <td><div id="konu12">-</div></td>
+                <td><div id="hazirlik12">-</div></td>
+            </tr>
+                    <tr id="hafta_13">
+                <td><strong>13</strong></td>
+                <td><div id="konu13">-</div></td>
+                <td><div id="hazirlik13">-</div></td>
+            </tr>
+                    <tr id="hafta_14">
+                <td><strong>14</strong></td>
+                <td><div id="konu14">-</div></td>
+                <td><div id="hazirlik14">-</div></td>
+            </tr>
+                    <tr id="hafta_15">
+                <td><strong>15</strong></td>
+                <td><div id="konu15">-</div></td>
+                <td><div id="hazirlik15">-</div></td>
+            </tr>
+                    <tr id="hafta_16">
+                <td><strong>16</strong></td>
+                <td><div id="konu16">-</div></td>
+                <td><div id="hazirlik16">-</div></td>
+            </tr>
+        </tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+    <tbody><tr>
+        <td style="width:20%" valign="top">
+            <strong>Ders Kitabı</strong>
+        </td>
+        <td><div id="book_name">-</div>
+</td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <strong>Önerilen Okumalar/Materyaller</strong>
+        </td>
+        <td><div id="materials">-</div>
+</td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>DEĞERLENDİRME ÖLÇÜTLERİ</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="evaluation_table1">
+    <tbody><tr class="table_top">
+        <td style="width:70%"><strong>Yarıyıl Aktiviteleri</strong></td>
+        <td style="width:15%" align="center"><strong>Sayı</strong></td>
+        <td style="width:15%" align="center"><strong>Katkı Payı %</strong>
+        </td><td style="width:15%"><strong>LO1 </strong></td>
+    
+    </tr>
+    <tr>
+        <td>Katılım</td>
+        <td>
+            <div class="editinput" id="attendance_no">-</div>
+        </td>
+        
+         <td>
+            <div class="editinput" id="attendance_per">-</div>
+        </td><td>
+            <div class="editinput" id="LO1attend">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Laboratuvar / Uygulama</td>
+        <td>
+            <div class="editinput" id="lab_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="lab_per">-</div>
+       	</td>
+         <td>
+            <div class="editinput" id="LO1lab">-</div>
+        </td>
+    </tr>
+	
+    <tr>
+        <td>Arazi Çalışması</td>
+        <td>
+            <div class="editinput" id="fieldwork_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="fieldwork_per">-</div>
+        </td>
+         <td>
+            <div class="editinput" id="LO1field">-</div>
+        </td>
+    </tr>
+	
+    <tr>
+        <td>Küçük Sınav / Stüdyo Kritiği</td>
+        <td>
+            <div class="editinput" id="quiz_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="quiz_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1quiz">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Ödev</td>
+        <td>
+            <div class="editinput" id="homework_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="homework_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1homework">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Sunum / Jüri Önünde Sunum</td>
+        <td>
+            <div class="editinput" id="presentation_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="presentation_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1present">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Proje</td>
+        <td>
+            <div class="editinput" id="project_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="project_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1project">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Seminer/Çalıştay</td>
+        <td>
+            <div class="editinput" id="seminar_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="seminar_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1seminar">-</div>
+        </td>
+    </tr>    
+<tr>
+        <td>Sözlü Sınav</td>
+        <td>
+            <div class="editinput" id="portfolios__no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="portfolios_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1portfolio">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Ara Sınav</td>
+        <td>
+            <div class="editinput" id="midterm_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="midterm_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1mid">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td>Final Sınavı</td>
+        <td>
+            <div class="editinput" id="final_no">-</div>
+        </td>
+        <td>
+            <div class="editinput" id="final_per">-</div>
+        </td>
+     <td>
+            <div class="editinput" id="LO1final">-</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><strong>Toplam</strong></td>
+        <td>
+            <div class="editinput" id="ara_total_no">0</div>
+        </td>
+        <td>
+            <div class="editinput" id="ara_total_per">0</div>
+        </td>
+     <td>
+            <div class="editinput" id="LOsum">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+<br>
+
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="evaluation_table2">
+    <tbody><tr style="background-color:#ff6600; color:#fff; font-weight: 100;">
+        <td style="width:70%">Yarıyıl İçi Çalışmalarının Başarı Notuna Katkısı</td>
+        <td style="width:15%" align="center" width="150" id="icKatki1">-</td>
+        <td style="width:15%" align="center" width="150" id="icKatki2">-</td>
+    </tr>
+    <tr style="background-color:#df520f; color:#fff; font-weight: 400;">
+        <td>Yarıyıl Sonu Çalışmalarının Başarı Notuna Katkısı</td>
+        <td align="center" width="150" id="sonKatki1">-</td>
+        <td align="center" width="150" id="sonKatki2">-</td>
+    </tr>
+    <tr>
+        <td align="right"><strong>Toplam</strong></td>
+        <td align="center" id="total_no" style="font-weight: bold;">0</td>
+        <td align="center" id="total_per" style="font-weight: bold;">0</td>
+    </tr>
+</tbody></table>
+</div>
+
+<div>
+    <h3>
+        <strong>AKTS / İŞ YÜKÜ TABLOSU</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="workload_table">
+    <thead>
+	    <tr class="table_top">
+	        <th style="width:55%"><strong>Yarıyıl Aktiviteleri</strong></th>
+	        <th style="width:15%" class="text-center"><strong>Sayı</strong></th>
+	        <th style="width:15%" class="text-center"><strong>Süre (Saat)</strong></th>
+	        <th style="width:15%" class="text-center"><strong>İş Yükü</strong></th>
+    
+	    </tr>
+    </thead>
+    <tbody><tr>
+        <td>Teorik Ders Saati <br><small><i></i></small></td>
+        <td>
+            <div id="course_hour_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="course_hour_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="course_hour_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+	
+    <tr>
+        <td>Laboratuvar / Uygulama Ders Saati<br><small><i></i></small></td>
+        <td>
+            <div id="lab_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="lab_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="lab_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Sınıf Dışı Ders Çalışması</td>
+        <td>
+            <div id="out_hour_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="out_hour_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="out_hour_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>    
+    <tr>
+        <td>Arazi Çalışması</td>
+        <td>
+            <div id="fieldwork_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="fieldwork_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="fieldwork_total_number" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Küçük Sınav / Stüdyo Kritiği</td>
+        <td>
+            <div id="quizess_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="quizess_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="quizess_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Ödev</td>
+        <td>
+            <div id="homework_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="homework_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="homework_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>    
+    <tr>
+        <td>Sunum / Jüri Önünde Sunum</td>
+        <td>
+            <div id="presentation_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="presentation_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="presentation_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Proje</td>
+        <td>
+            <div id="project_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="project_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="project_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>    
+    <tr>
+        <td>Seminer/Çalıştay</td>
+        <td>
+            <div id="seminar_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="seminar_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="seminar_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+<tr>
+        <td>Sözlü Sınav</td>
+        <td>
+            <div id="portfolios_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="portfolios_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="portfolios_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Ara Sınavlar</td>
+        <td>
+            <div id="midterm_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="midterm_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="midterm_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>Final Sınavı</td>
+        <td>
+            <div id="final_number" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="final_duration" class="editinput">-</div>
+        </td>
+        <td>
+            <div id="final_total_workload" class="editinput">-</div>
+        </td>
+    
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><strong>Toplam</strong></td>
+        <td align="center" style="font-weight: bold;">
+		<div class="editinput" id="ects_total">-</div>
+        </td>
+    </tr>
+</tbody></table>
+</div>
+
+<p>&nbsp;</p>
+<div>
+    <h3>
+        <strong>DERSİN ÖĞRENME ÇIKTILARININ PROGRAM YETERLİLİKLERİ İLE İLİŞKİSİ</strong>
+    </h3>
+</div>
+<div class="table-responsive"><table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered" id="yeters">
+    <tbody><tr class="table_top ">
+        <td rowspan="2">
+            <div align="center">#</div>
+        </td>
+        <td rowspan="2"><strong>Program Yeterlilikleri / Çıktıları</strong></td>
+        <td colspan="5">
+            <div align="center"><strong>* Katkı Düzeyi</strong></div>
+        </td>
+    </tr>
+    <tr>
+        <td width="30" class="table_top"><div align="center">1</div></td>
+        <td width="30" class="table_top"><div align="center">2</div></td>
+        <td width="30" class="table_top"><div align="center">3</div></td>
+        <td width="30" class="table_top"><div align="center">4</div></td>
+        <td width="30" class="table_top"><div align="center">5</div></td>
+        <td width="30" class="table_top"><div align="center">LO#</div></td>
+    </tr>
+                <tr id="1">
+                <td><strong>1</strong></td>
+                <td class="outcomeAlert"><p>Matematik, Fen Bilimleri, Bilgisayar Bilimleri ve Yazılım Mühendisliği konularında yeterli bilgi sahibidir; bu alanlardaki kuramsal ve uygulamalı bilgileri, Yazılım Mühendisliği problemlerinde kullanır.</p>
+</td>
+                
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki1">-</td><td width="30" style="text-align:center; vertical-align:middle;" id="1katki2">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki3">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki4">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki5">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="1katki_LO">-</td>
+            </tr>
+                    <tr id="2">
+                <td><strong>2</strong></td>
+                <td class="outcomeAlert"><p>Karmaşık Yazılım Mühendisliği problemlerini saptar, tanımlar, formüle eder ve çözer; bu amaca uygun analiz ve modelleme yöntemlerini seçer ve uygular.</p>
+</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki1">-</td><td width="30" style="text-align:center; vertical-align:middle;" id="2katki2">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki3">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki4">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki5">-</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="2katki_LO">-</td>
+            </tr>
+                    <tr id="3">
+                <td><strong>3</strong></td>
+                <td class="outcomeAlert"><p>Karmaşık bir yazılım sistemini, süreci veya ürünü gerçekçi kısıtlar ve koşullar altında, belirli gereksinimleri karşılayacak şekilde tasarlar, gerçekleştirir, sınar, doğrular, raporlar, ölçer ve bakımını yapar; bu amaçla modern yöntemleri uygular.</p>
+</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="3katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="3katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="3katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="3katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="3katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="3katki_LO">-</td>
+            </tr>
+                    <tr id="4">
+                <td><strong>4</strong></td>
+                <td class="outcomeAlert"><p>Yazılım Mühendisliği uygulamalarında karşılaşılan karmaşık problemlerin analizi ve çözümü için gerekli olan modern teknik ve araçları geliştirir, seçer ve kullanır; bilişim teknolojilerini etkin bir şekilde kullanır.</p>
+</td>
+                 <td width="30" style="text-align:center; vertical-align:middle;" id="4katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="4katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="4katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="4katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="4katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="4katki_LO">-</td>
+            </tr>
+                    <tr id="5">
+                <td><strong>5</strong></td>
+                <td class="outcomeAlert"><p>Yazılım Mühendisliği problemlerinin incelenmesi için deney tasarlar, deney yapar, veri toplar, sonuçları analiz eder ve yorumlar.</p>
+</td>
+                              <td width="30" style="text-align:center; vertical-align:middle;" id="5katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="5katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="5katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="5katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="5katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="5katki_LO">-</td>
+      
+            </tr>
+                    <tr id="6">
+                <td><strong>6</strong></td>
+                <td class="outcomeAlert"><p>Yazılım Mühendisliği disiplini içinde ve çok disiplinli takımlarda etkin biçimde çalışır; bireysel çalışma sergiler.</p>
+</td>
+                               <td width="30" style="text-align:center; vertical-align:middle;" id="6katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="6katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="6katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="6katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="6katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="6katki_LO">-</td>
+      
+            </tr>
+                    <tr id="7">
+                <td><strong>7</strong></td>
+                <td class="outcomeAlert"><p>Türkçe sözlü ve yazılı etkin iletişim kurar; etkin rapor yazar ve yazılı raporları anlar, tasarım ve üretim raporları hazırlar, etkin sunum yapar, açık ve anlaşılır talimat verir ve alır.</p>
+</td>
+                             <td width="30" style="text-align:center; vertical-align:middle;" id="7katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="7katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="7katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="7katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="7katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="7katki_LO">-</td>
+            </tr>
+                    <tr id="8">
+                <td><strong>8</strong></td>
+                <td class="outcomeAlert"><p>Mühendislik ve Yazılım uygulamalarının evrensel ve toplumsal boyutlarda sağlık, çevre ve güvenlik üzerindeki etkileri ve çağın mühendislik alanına yansıyan sorunları hakkında bilgi sahibidir; mühendislik ve yazılım çözümlerinin hukuksal sonuçlarının farkındadır.</p>
+</td>
+                               <td width="30" style="text-align:center; vertical-align:middle;" id="8katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="8katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="8katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="8katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="8katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="8katki_LO">-</td>
+            </tr>
+                    <tr id="9">
+                <td><strong>9</strong></td>
+                <td class="outcomeAlert"><p>Etik ilkelerine uygun davranma, mesleki ve etik sorumluluk bilincine sahiptir; mühendislik uygulamalarında kullanılan standartlar hakkında bilgi sahibidir.&nbsp;</p>
+</td>
+                 <td width="30" style="text-align:center; vertical-align:middle;" id="9katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="9katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="9katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="9katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="9katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="9katki_LO">-</td>
+            </tr>
+                    <tr id="10">
+                <td><strong>10</strong></td>
+                <td class="outcomeAlert"><p>Proje yönetimi, risk yönetimi ve değişiklik yönetimi gibi, iş hayatındaki uygulamalar hakkında bilgi sahibidir; girişimcilik, yenilikçilik hakkında bilinçlidir; sürdürülebilir kalkınma hakkında bilgi sahibidir.</p>
+</td>
+                 <td width="30" style="text-align:center; vertical-align:middle;" id="10katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="10katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="10katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="10katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="10katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="10katki_LO">-</td>
+            </tr>
+                    <tr id="11">
+                <td><strong>11</strong></td>
+                <td class="outcomeAlert"><p>Bir yabancı dili kullanarak Yazılım Mühendisliği ile ilişkili konularda, bilgi toplar ve meslektaşları ile iletişim kurar. ("European Language Portfolio Global Scale", Level B1)</p>
+</td>
+               <td width="30" style="text-align:center; vertical-align:middle;" id="11katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="11katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="11katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="11katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="11katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="11katki_LO">-</td>
+            </tr>
+                    <tr id="12">
+                <td><strong>12</strong></td>
+                <td class="outcomeAlert"><p>İkinci yabancı dili orta düzeyde kullanır.</p>
+</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="12katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="12katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="12katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="12katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="12katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="12katki_LO">-</td>
+            </tr>
+                    <tr id="13">
+                <td><strong>13</strong></td>
+                <td class="outcomeAlert"><p>Yaşam boyu öğrenmenin gerekliliği bilincindedir; bilgiye erişebilir, bilim ve teknolojideki gelişmeleri izler ve kendini sürekli yeniler; insanlık tarihi boyunca oluşan bilgi birikimini Yazılım Mühendisliği alanıyla ilişkilendirir.&nbsp;</p>
+</td>
+                <td width="30" style="text-align:center; vertical-align:middle;" id="13katki1">-</td>
+    <td width="30" style="text-align:center; vertical-align:middle;" id="13katki2">-</td>
+         <td width="30" style="text-align:center; vertical-align:middle;" id="13katki3">-</td>
+           <td width="30" style="text-align:center; vertical-align:middle;" id="13katki4">-</td>
+          <td width="30" style="text-align:center; vertical-align:middle;" id="13katki5">-</td>
+            <td width="30" style="text-align:center; vertical-align:middle;" id="13katki_LO">-</td>
+            </tr>
+        </tbody></table>
+</div>
+<p align="right">*1 Lowest, 2 Low, 3 Average, 4 High, 5 Highest</p>
+<!--
+<br><a class="link-icon btn btn-primary btn-md btn-block" href="https://ects.ieu.edu.tr/new/PDF_syllabus_HEADER.php?section=eco.ieu.edu.tr&course_code=TURK 100&course_name=Türk Dili&lang=tr&cer=&sem=">DERS TANITIM BİLGİLERİNİ İNDİRMEK İÇİN TIKLAYINIZ</a><hr>
+-->
+<p>&nbsp;</p><hr>
+
+</div>
+    </div>
+
+</body></html>

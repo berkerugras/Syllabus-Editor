@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelling", "Modelling\Modelling.csproj", "{66AF51CB-3D40-41C1-9BF1-96C214DB8D0E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setupping", "setupping\setupping.vdproj", "{5C0F2DB9-79B4-456F-A4FD-66D96D7DD28D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66AF51CB-3D40-41C1-9BF1-96C214DB8D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AF51CB-3D40-41C1-9BF1-96C214DB8D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AF51CB-3D40-41C1-9BF1-96C214DB8D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AF51CB-3D40-41C1-9BF1-96C214DB8D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0F2DB9-79B4-456F-A4FD-66D96D7DD28D}.Debug|Any CPU.ActiveCfg = Debug
+		{5C0F2DB9-79B4-456F-A4FD-66D96D7DD28D}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D5A2680-AE00-4670-9488-081E09A0D49E}
+	EndGlobalSection
+EndGlobal
